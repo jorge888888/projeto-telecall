@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Programável - Telecall</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="sms-programavel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="header" role="banner">
+        <img src="telecall.png" alt="Logo Telecall" class="img-fluid" />
+        <ul class="Menu mb-0 d-none d-md-flex">
+            <li class="nav-item"><a class="nav-link" href="inicio.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link" href="2fa.html">2FA</a></li>
+            <li class="nav-item"><a class="nav-link" href="número de mascara.html">Número Máscara</a></li>
+            <li class="nav-item"><a class="nav-link" href="google-verified-calls.html">Google Verified Calls</a></li>
+            <li class="nav-item"><a class="nav-link" href="sms-programavel.html">SMS Programável</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+        <div class="d-flex align-items-center">
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div id="auth-container" class="ms-2">
+                <a href="login 2.html" class="btn btn-outline-light" id="login-link">Entrar</a>
+                <div id="user-info" class="d-none align-items-center text-white">
+                    <span id="user-login" class="me-2"></span>
+                    <button id="logout-btn" class="btn btn-outline-light btn-sm">Sair</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="container-sms">
+        <h1 class="titulo-sms">SMS Programável</h1>
+        <div class="row-sms">
+            <div class="col-sms-esq">
+                <h2 class="subtitulo-sms">O que é?</h2>
+                <p><b>Conecte-se com seus clientes.</b><br>
+                É muito provável que você já tenha recebido uma mensagem de texto de uma empresa ou organização. Com uma API, qualquer empresa pode enviar mensagens de texto e impactar clientes, prospects ou fornecedores como parte de seu processo comercial. Com essa ferramenta você envia mensagens de SMS com as informações que o seu cliente precisa e com a segurança, a velocidade e a confiabilidade que você espera.</p>
+            </div>
+            <div class="col-sms-dir">
+                <p class="stat-title">SMS é a forma mais rápida, eficiente e de baixo custo para se comunicar com seus clientes.</p>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-num">98%</span> de taxa de abertura</div>
+                    <div class="stat-item"><span class="stat-num">90%</span> dos SMS são lidos em até 3 minutos.</div>
+                    <div class="stat-item"><span class="stat-num">80%</span> das pessoas interagem com SMS comerciais.</div>
+                    <div class="stat-item"><span class="stat-num">35x</span> maior a probabilidade de um cliente abrir um SMS do que um e-mail.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-4">Quem usa?</h2>
+                <p class="text-muted"><i>(São muitos os caso de uso, mas veja um exemplo do serviço sendo usado em caso de segurança.)</i></p>
+                <div class="phone-container text-center">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <p class="message-text">
+                                Olá. Segue código para validar seu acesso no Portal VIVO<br>
+                                847785
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-4">Benefícios</h2>
+                <ul class="benefits-list">
+                    <li><i class="fas fa-check"></i> Comunicação rápida, efetiva e escalável.</li>
+                    <li><i class="fas fa-check"></i> Baixo custo.</li>
+                    <li><i class="fas fa-check"></i> Alta taxa de entrega e leitura.</li>
+                    <li><i class="fas fa-check"></i> Personalização de data, hora e conteúdo.</li>
+                    <li><i class="fas fa-check"></i> Agendamento de campanhas.</li>
+                    <li><i class="fas fa-check"></i> Interação bidirecional: recebimento de respostas.</li>
+                    <li><i class="fas fa-check"></i> Plataforma user-friendly.</li>
+                    <li><i class="fas fa-check"></i> Acompanhamento de métricas e relatórios.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Processos</h2>
+        <div class="workflow-container">
+            <!-- Primeira linha -->
+            <div class="workflow-top">
+                <div class="workflow-item">
+                    <div class="circle">
+                        <i class="fas fa-mobile fa-4x"></i>
+                    </div>
+                    <p>Cliente abre o aplicativo</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="workflow-item">
+                    <div class="circle">
+                        <i class="fas fa-shopping-cart fa-4x"></i>
+                    </div>
+                    <p>Cliente faz o pedido</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="workflow-item">
+                    <div class="circle">
+                        <i class="fas fa-store fa-4x"></i>
+                    </div>
+                    <p>Entregador chega<br>no Restaurante</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="workflow-item">
+                    <div class="circle">
+                        <i class="fas fa-bicycle fa-4x"></i>
+                    </div>
+                    <p>Entregador sai do<br>restaurante</p>
+                </div>
+            </div>
+
+            <!-- Linha de conexão -->
+            <div class="connection-line"></div>
+
+            <!-- Segunda linha -->
+            <div class="workflow-bottom">
+                <div class="workflow-item">
+                    <div class="circle">
+                        <i class="fas fa-receipt fa-4x"></i>
+                    </div>
+                    <p>Envia o recibo</p>
+                </div>
+                <div class="arrow">←</div>
+                <div class="workflow-item">
+                    <div class="circle">
+                        <i class="fas fa-check-circle fa-4x"></i>
+                    </div>
+                    <p>Pedido entregue</p>
+                </div>
+                <div class="arrow">←</div>
+                <div class="workflow-item">
+                    <div class="circle">
+                        <i class="fas fa-search fa-4x"></i>
+                    </div>
+                    <p>Entregador<br>procura o cliente</p>
+                </div>
+                <div class="arrow">←</div>
+                <div class="workflow-item">
+                    <div class="circle">
+                        <i class="fas fa-bell fa-4x"></i>
+                    </div>
+                    <p>Atualiza o cliente o<br>status do pedido</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h1 class="h4 text-white mb-0">TELECALL</h1>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/TelecallBr" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/telecallbr" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/telecall" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="sms-programavel.js"></script>
+    <script src="auth.js" defer></script>
+</body>
+</html> 

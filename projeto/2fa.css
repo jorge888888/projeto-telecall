@@ -1,0 +1,316 @@
+:root {
+    --menu-bg: #193B69;
+    --menu-text: #ffffff;
+    --body-bg: linear-gradient(90deg, #9AB8E0 0%, #FFFFFF 100%);
+    --box-bg: #F4F4F4;
+    --text-color: #193b69;
+    --marca-color: #013777;
+    --marca-shadow: #6699cc;
+    --footer-bg: #3D434B;
+}
+[data-bs-theme="dark"] {
+    --menu-bg: #0d1b2a;
+    --menu-text: #ffffff;
+    --body-bg: linear-gradient(90deg, #1a1d20 0%, #212529 100%);
+    --box-bg: #2b3035;
+    --text-color: #e9ecef;
+    --marca-color: #9AB8E0;
+    --marca-shadow: #193B69;
+    --footer-bg: #3D434B;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--body-bg);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+}
+.header {
+    width: 100%;
+    height: 68px;
+    background: var(--menu-bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+.header img {
+    height: 60px;
+}
+.Menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+.nav-item {
+    position: relative;
+}
+.nav-link {
+    color: var(--menu-text);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+    padding: 8px 12px;
+    border-radius: 6px;
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    background: #9AB8E0;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+.nav-item:hover .nav-link::after {
+    width: 100%;
+}
+.nav-link:hover, .nav-link.active {
+    color: #9AB8E0 !important;
+}
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--menu-text);
+    cursor: pointer;
+    padding: 8px;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+.main-title {
+    color: var(--marca-color);
+    font-weight: 700;
+    text-shadow: 1px 1px 3px var(--marca-shadow);
+}
+h5 {
+    color: var(--marca-color);
+}
+footer, .footer {
+    background: var(--footer-bg);
+    color: #fff;
+    padding: 5px 0;
+    margin-top: auto;
+    
+} 
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-logo h1 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+.social-icon {
+    color: white;
+    font-size: 1.25rem;
+    transition: transform 0.3s, color 0.3s;
+}
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #9AB8E0;
+}
+@media (max-width: 900px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    .Menu {
+        flex-direction: column;
+        gap: 0;
+    }
+} /* =============================
+Seção: Como Funciona? (2FA)
+============================= */
+.funcionamento-2fa {
+ margin-top: 0;
+ padding: 56px 0 48px 0;
+}
+.funcionamento-2fa h5 {
+ font-size: 2rem;
+ font-weight: 600;
+ letter-spacing: 0.5px;
+ margin-bottom: 48px;
+}
+.funcionamento-2fa .row {
+ justify-content: center;
+ align-items: flex-start;
+ gap: 10px
+}
+.funcionamento-2fa .func-bloco {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin: 0 0.5rem;
+ min-width: 220px;
+ max-width: 240px;
+}
+.funcionamento-2fa .func-icone {
+ 
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ margin-bottom: 18px;
+}
+.funcionamento-2fa .func-icone i {
+ color: #193b69;
+ font-size: 2.3rem;
+}
+.funcionamento-2fa p {
+ max-width: 210px;
+ font-size: 1.07rem;
+ line-height: 1.38;
+ text-align: center;
+ margin: 0 auto 0 auto;
+}
+.funcionamento-2fa .func-bloco span.fst-italic {
+ font-size: 0.98rem;
+}
+@media (max-width: 991px) {
+ .funcionamento-2fa .row {
+     flex-wrap: wrap;
+     gap: 32px 0;
+ }
+ .funcionamento-2fa .func-bloco {
+     margin-bottom: 32px;
+ }
+}
+@media (max-width: 767px) {
+ .funcionamento-2fa .row {
+     flex-direction: column;
+     align-items: center;
+     gap: 32px 0;
+ }
+ .funcionamento-2fa .func-bloco {
+     margin-bottom: 32px;
+     min-width: 180px;
+     max-width: 100%;
+ }
+ .funcionamento-2fa .func-icone {
+     width: 72px;
+     height: 72px;
+ }
+ .funcionamento-2fa .func-icone i {
+     font-size: 1.7rem;
+ }
+ .funcionamento-2fa p {
+     font-size: 0.98rem;
+ }
+} /* =============================
+Seção: Por que usar? (2FA)
+============================= */
+.porque-usar-2fa {
+ 
+ padding: 48px 0 40px 0;
+}
+.titulo-porque-usar {
+ color: #193b69;
+ font-size: 1.6rem;
+ font-weight: 600;
+ text-align: left;
+ margin-bottom: 24px;
+}
+.beneficios-2fa {
+ padding-left: 0;
+ list-style: none;
+ color: #193b69;
+ font-size: 1.08rem;
+}
+.beneficios-2fa li {
+ margin-bottom: 12px;
+ position: relative;
+ padding-left: 18px;
+}
+.beneficios-2fa li::before {
+ content: '\2022';
+ color: #193b69;
+ font-weight: bold;
+ display: inline-block;
+ width: 1em;
+ margin-left: -1em;
+}
+.areas-uso-2fa {
+ padding-left: 0;
+ list-style: none;
+ color: #193b69;
+ font-size: 1.08rem;
+}
+.areas-uso-2fa li {
+ display: flex;
+ align-items: center;
+ margin-bottom: 16px;
+ gap: 12px;
+}
+.icone-area {
+ width: 32px;
+ height: 32px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: #fff;
+ border-radius: 8px;
+ box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+ margin-right: 10px;
+ font-size: 1.3rem;
+}
+.icone-area i {
+ color: #193b69;
+}
+@media (max-width: 991px) {
+ .porque-usar-2fa .row {
+     flex-direction: column;
+     gap: 32px 0;
+ }
+ .areas-uso-2fa, .beneficios-2fa {
+     font-size: 1rem;
+ }
+}
+@media (max-width: 767px) {
+ .porque-usar-2fa {
+     padding: 32px 0 24px 0;
+ }
+ .titulo-porque-usar {
+     font-size: 1.2rem;
+     margin-bottom: 16px;
+ }
+ .icone-area {
+     width: 26px;
+     height: 26px;
+     font-size: 1rem;
+ }
+} 

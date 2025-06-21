@@ -1,0 +1,374 @@
+/* Importa as variáveis e estilos principais do login.css */
+  /* Variáveis de cores */
+  :root {
+    --menu-bg: #193B69;
+    --menu-text: #ffffff;
+    --body-bg: linear-gradient(90deg, #9AB8E0 0%, #FFFFFF 100%);
+    --box-bg: #F4F4F4;
+    --text-color:#193b69;
+    --marca-color: #013777;
+    --marca-shadow: #6699cc;
+    --footer-bg: #3D434B;
+  }
+
+  [data-bs-theme="dark"] {
+    --menu-bg: #0d1b2a;
+    --menu-text: #ffffff;
+    --body-bg: linear-gradient(90deg, #1a1d20 0%, #212529 100%);
+    --box-bg: #2b3035;
+    --text-color: #e9ecef;
+    --marca-color: #9AB8E0;
+    --marca-shadow: #193B69;
+    --footer-bg: #1a1d20;
+  }
+
+.container {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+
+.header {
+  width: 100%;
+  height: 68px;
+  background: #193B69;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.header img {
+  height: 60px;
+}
+
+/* Menu Navigation - Exatamente igual ao login.css */
+.Menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: var(--menu-text);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-link:hover {
+  color: #9AB8E0 !important; /* Azul quando passar o mouse */
+  transform: translateY(-2px);
+}
+
+/* Theme Toggle Button - Exatamente igual ao login.css */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--menu-text);
+  cursor: pointer;
+  padding: 8px;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Modo escuro apenas para o fundo */
+[data-bs-theme="dark"] body {
+  background: linear-gradient(to bottom, #1a1d20 0%, #212529 100%);
+  color: #e9ecef; 
+}
+
+[data-bs-theme="dark"] h2 {
+  color: #e9ecef;
+}
+
+[data-bs-theme="dark"] h5 {
+  color: #e9ecef;
+}
+
+[data-bs-theme="dark"] p {
+  color: #e9ecef;
+}
+
+[data-bs-theme="dark"] li {
+  color: #e9ecef;
+}
+[data-bs-theme="dark"] info-box{
+  color: #e9ecef;
+}
+
+ h2, h5, p, ul {
+  color: #193b69;
+}
+
+.titulo-principal {
+    color: #003366;
+    font-weight: bold;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+}
+
+.titulo-secundario {
+    color: #003366;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--body-bg);
+    padding-bottom: 120px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+h1, .titulo-sms {
+  text-align: center;
+  color: #193B69;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+h2 {
+    color: #003366;
+    font-weight: bold;
+}
+
+h5 {
+    color: #003366;
+    margin-top: 20px;
+    align-items: center;
+}
+
+/* Menu Navigation - Exatamente igual ao login.css */
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  margin-right: 8px 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+  position: relative;
+}
+
+li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #9AB8E0;
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+
+li:hover a,
+li:focus a {
+  transform: translateY(-2px);
+}
+
+li:hover a::after,
+li:focus a::after {
+  width: 100%;
+}
+
+/* Footer - Exatamente igual ao login.css */
+.footer {
+  background: linear-gradient(0deg, #3D434B, #3D434B);
+  padding: 5px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  color: #add8e6;
+}
+
+.quem-usa-section h2 {
+    color: #193b69;
+}
+
+.quem-usa-section .fas {
+    color: #193B69;
+}
+
+.quem-usa-section h5 {
+    color: #193B69;
+}
+
+.quem-pode-usar h2 {
+    color: #193b69;
+}
+
+.quem-pode-usar .info-box {
+    border-radius: 8px;
+    padding: 18px;
+    max-width: 600px;
+    text-align: justify;
+    color: #193B69;
+}
+
+.quem-pode-usar .highlight {
+    font-weight: bold;
+    color: #193B69;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .texto {
+        max-width: 100%;
+    }
+    .header img {
+        height: 60px;
+    }
+    .titulo-principal {
+        font-size: 1.3rem;
+    }
+    .titulo-secundario {
+        font-size: 1rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Seção Como Funciona */
+.como-funciona-section {
+    padding: 40px 0 30px 0;
+}
+
+
+.como-funciona-section h2 {
+    color: #193b69;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+}
+.como-funciona-section .fa-user,
+.como-funciona-section .fa-cloud,
+.como-funciona-section .fa-user-friends {
+    color: #193B69;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+.como-funciona-section .fa-arrow-right {
+    color: #193B69;
+    font-size: 2rem;
+}
+.como-funciona-section .fw-bold {
+    color: #193B69;
+    font-size: 1.1rem;
+}
+.como-funciona-section .small {
+    color: #193B69;
+    font-size: 0.98rem;
+}
+@media (max-width: 768px) {
+    .como-funciona-section .fa-arrow-right {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+    .como-funciona-section .row > div {
+        margin-bottom: 25px;
+    }
+    .como-funciona-container {
+        padding: 18px 4px;
+    }
+} 
+
+/* Modo escuro para ícones */
+[data-bs-theme="dark"] .quem-usa-section .fas {
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .como-funciona-section .fa-user,
+[data-bs-theme="dark"] .como-funciona-section .fa-cloud,
+[data-bs-theme="dark"] .como-funciona-section .fa-user-friends,
+[data-bs-theme="dark"] .como-funciona-section .fa-arrow-right {
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .info-box,
+[data-bs-theme="dark"] .highlight {
+  color: #fff !important;
+}
+
+[data-bs-theme="dark"] .header {
+  background: var(--menu-bg) !important;
+  color: var(--menu-text) !important;
+} 

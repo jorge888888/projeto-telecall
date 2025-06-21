@@ -1,0 +1,190 @@
+/* Variáveis de cores */
+:root {
+    --menu-bg: #193B69;
+    --menu-text: #ffffff;
+    --body-bg: linear-gradient(90deg, #9AB8E0 0%, #FFFFFF 100%);
+    --box-bg: #F4F4F4;
+    --text-color:#193b69;
+    --marca-color: #013777;
+    --marca-shadow: #6699cc;
+    --footer-bg: #3D434B;
+}
+
+[data-bs-theme="dark"] {
+    --menu-bg: #0d1b2a;
+    --menu-text: #ffffff;
+    --body-bg: linear-gradient(90deg, #1a1d20 0%, #212529 100%);
+    --box-bg: #2b3035;
+    --text-color: #e9ecef;
+    --marca-color: #9AB8E0;
+    --marca-shadow: #193B69;
+    --footer-bg: #1a1d20;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--body-bg);
+    padding-bottom: 120px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 68px;
+    background: var(--menu-bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.header img {
+    height: 60px;
+}
+
+.Menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--menu-text);
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    background: #9AB8E0;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-item:hover .nav-link {
+    transform: translateY(-3px);
+    color: #9AB8E0;
+}
+
+.nav-item:hover .nav-link::after {
+    width: 100%;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--menu-text);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.main-title {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.subtitle {
+    color: var(--text-color);
+    margin-top: -10px;
+    font-size: 1.1em;
+}
+
+.content-section h2 {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.content-section p, .benefits-list li {
+    color: var(--text-color);
+    text-align: justify;
+}
+
+.benefits-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.benefits-list li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.compatibility-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.compatibility-list li {
+    text-align: justify;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.footer {
+    background: linear-gradient(0deg, #3D434B, #3D434B);
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 20px;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #add8e6;
+}
+
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] h5,
+[data-bs-theme="dark"] h6 {
+    color: #193b69;
+}

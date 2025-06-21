@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Telecall</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="servicos.css">
+</head>
+<body>
+    <div class="header" role="banner">
+        <img src="telecall.png" alt="Logo Telecall" class="img-fluid" />
+        <ul class="Menu mb-0 d-none d-md-flex">
+            <li class="nav-item"><a class="nav-link" href="inicio.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link" href="2fa.html">2FA</a></li>
+            <li class="nav-item"><a class="nav-link" href="número de mascara.html">Número Máscara</a></li>
+            <li class="nav-item"><a class="nav-link" href="google-verified-calls.html">Google Verified Calls</a></li>
+            <li class="nav-item"><a class="nav-link" href="sms-programavel.html">SMS Programável</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+        <div class="d-flex align-items-center">
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div id="auth-container" class="ms-2">
+                <a href="login 2.html" class="btn btn-outline-light" id="login-link">Entrar</a>
+                <div id="user-info" class="d-none align-items-center text-white">
+                    <span id="user-login" class="me-2"></span>
+                    <button id="logout-btn" class="btn btn-outline-light btn-sm">Sair</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="container-fluid text-center">
+        <h1 class="main-title">Serviços Disponibilizados Para Você</h1>
+        <div class="services-container">
+            <div class="service-item">
+                <a href="#">
+                    <div class="service-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <span>2FA</span>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="número de mascara.html">
+                    <div class="service-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <span>Número Máscara</span>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="google-verified-calls.html">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <span>Google Verified Calls</span>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="sms-programavel.html">
+                    <div class="service-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <span>SMS Programável</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h1 class="h4 text-white mb-0">TELECALL</h1>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/TelecallBr" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/telecallbr" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/telecall" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="servicos.js"></script>
+    <script src="auth.js" defer></script>
+</body>
+</html> 
