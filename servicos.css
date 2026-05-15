@@ -1,0 +1,325 @@
+/* Variáveis de Cores */
+:root {
+    --header-bg: #193B69;
+    --menu-text: #ffffff;
+    --body-bg: linear-gradient(90deg, #FFFFFF 0%, #9AB8E0 100%);
+    --text-color: #193b69;
+    --footer-bg: #343a40;
+    --icon-bg: linear-gradient(145deg, #1f4a88, #153a6e);
+    --icon-shadow: 5px 5px 15px #d9d9d9, -5px -5px 15px #ffffff;
+    --menu-bg: #193B69;
+    --box-bg: #F4F4F4;
+    --marca-color: #013777;
+    --marca-shadow: #6699cc;
+}
+
+[data-bs-theme="dark"] {
+    --header-bg: #0d1b2a;
+    --menu-text: #e9ecef;
+    --body-bg: linear-gradient(180deg, #212529 0%, #1a1d20 100%);
+    --text-color: #e9ecef;
+    --footer-bg: #3d4348;
+    --icon-bg: linear-gradient(145deg, #23282d, #1d2125);
+    --icon-shadow: 5px 5px 15px #1c1f23, -5px -5px 15px #262b31;
+    --menu-bg: #0d1b2a;
+    --box-bg: #2b3035;
+    --marca-color: #9AB8E0;
+    --marca-shadow: #193B69;
+}
+
+/* Estilos Gerais */
+body {
+    background: var(--body-bg);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho e Navegação */
+.header {
+    background-color: var(--header-bg);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    height: 68px;
+    background: var(--menu-bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.logo {
+    height: 50px;
+}
+
+.Menu, .Menu-mobile {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    gap: px;
+}
+
+.Menu-mobile {
+    flex-direction: column;
+    background-color: var(--header-bg);
+    padding: 1rem;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--menu-text);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.nav-link:hover {
+    color: #9AB8E0 !important;
+    transform: translateY(-2px);
+}
+
+.nav-item:hover .nav-link::after {
+    width: 100%;
+}
+
+.header-right .theme-toggle, .header-right .navbar-toggler {
+    background: none;
+    border: none;
+    color: var(--menu-text);
+    cursor: pointer;
+    padding: 8px;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.header-right .theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Conteúdo Principal */
+main {
+    flex-grow: 1;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.main-title {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    border-top: 1px solid #9AB8E0;
+    padding-top: 3rem;
+}
+
+.service-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.service-item a:hover {
+    transform: scale(1.05);
+}
+
+.service-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--icon-bg);
+    box-shadow: var(--icon-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.service-icon i {
+    font-size: 3rem;
+    color: var(--menu-text);
+}
+
+[data-bs-theme="dark"] .service-icon i {
+     color: #9AB8E0;
+}
+
+.service-item span {
+    font-weight: 500;
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--footer-bg);
+    color: white;
+    padding: 5px
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.25rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #9AB8E0;
+}
+
+/* ====== MENU PADRÃO NÚMERO MÁSCARA ====== */
+.header img {
+    height: 60px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--menu-text);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.nav-link:hover {
+    color: #9AB8E0 !important;
+    transform: translateY(-2px);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--menu-text);
+    cursor: pointer;
+    padding: 8px;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+[data-bs-theme="dark"] body {
+    background: linear-gradient(to bottom, #1a1d20 0%, #212529 100%);
+    color: #e9ecef;
+}
+
+[data-bs-theme="dark"] h1 {
+    color: #193b69;
+}
+
+[data-bs-theme="dark"] h2 {
+    color: #e9ecef;
+}
+
+[data-bs-theme="dark"] h5 {
+    color: #e9ecef;
+}
+
+[data-bs-theme="dark"] p {
+    color: #e9ecef;
+}
+
+[data-bs-theme="dark"] li {
+    color: #e9ecef;
+}
+
+[data-bs-theme="dark"] info-box{
+    color: #e9ecef;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    margin-right: 8px 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    position: relative;
+}
+
+li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #9AB8E0;
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+li:hover a,
+li:focus a {
+    transform: translateY(-2px);
+}
+
+li:hover a::after,
+li:focus a::after {
+    width: 100%;
+} 

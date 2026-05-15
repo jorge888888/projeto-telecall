@@ -1,0 +1,274 @@
+/* Variáveis de Cores */
+:root {
+    --header-bg: #193B69;
+    --menu-text: #ffffff;
+    --body-bg: linear-gradient(90deg, #9AB8E0 0%, #FFFFFF 100%);
+    --text-color: #193b69;
+    --main-title-color: #013777;
+    --diagram-bg: #f8f9fa;
+    --diagram-stroke: #00b8d4;
+    --footer-bg: #3d4348;
+}
+
+[data-bs-theme="dark"] {
+    --header-bg: #0d1b2a;
+    --menu-text: #e9ecef;
+    --body-bg: #212529;
+    --text-color: #e9ecef;
+    --main-title-color: #9AB8E0;
+    --diagram-bg: #2b3035;
+    --diagram-stroke: #9AB8E0;
+    --footer-bg: #3d4348;
+}
+
+/* Estilos Gerais */
+body {
+    background: var(--body-bg);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: var(--header-bg) !important;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    height: 68px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.header img {
+    height: 60px;
+}
+
+.header .navbar-collapse {
+    flex-grow: 1;
+}
+
+.Menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+
+}
+
+.Menu .nav-item {
+    margin-right: 5px;
+}
+
+.Menu .nav-item:last-child {
+    margin-right: 0;
+}
+
+.Menu .nav-link {
+    color: var(--menu-text);
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.Menu .nav-link:hover {
+    color: #9AB8E0 !important;
+}
+
+.Menu .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    background: #9AB8E0;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.Menu .nav-item:hover .nav-link::after {
+    width: 100%;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--menu-text);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Conteúdo Principal */
+.main-title {
+    color: var(--main-title-color);
+    font-weight: 500;
+}
+
+.fw-bold.mb-3 {
+    color: var(--text-color);
+}
+
+.text-primary {
+    color: var(--main-title-color) !important;
+}
+
+/* Diagrama Mermaid */
+.mermaid {
+    background-color: var(--diagram-bg);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Estilos para o texto dentro do diagrama (se o Mermaid permitir via CSS) */
+.mermaid text {
+    fill: var(--text-color) !important;
+}
+
+/* Ajuste de estilo do nó principal do diagrama via variáveis CSS do Mermaid */
+.mermaid .root-node {
+    fill: var(--diagram-bg);
+    stroke: var(--diagram-stroke);
+}
+
+/* Seção de Usos */
+.use-card {
+    background-color: var(--diagram-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.use-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.use-card .list-unstyled li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.use-card .list-unstyled .fa-check-circle {
+    margin-top: 4px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--footer-bg);
+    color: white;
+    padding: 5px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #add8e6;
+}
+
+/* Responsividade */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .Menu {
+        display: none; /* Esconde o menu principal em telas pequenas */
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background-color: var(--header-bg);
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .navbar-collapse .Menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-collapse .Menu .nav-item {
+        width: 100%;
+        text-align: left;
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-toggler {
+        display: block;
+        background: none;
+        border: none;
+    }
+
+    .header {
+        padding: 0.5rem 1rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .row > * {
+        text-align: center;
+    }
+
+    .mermaid {
+        margin-top: 2rem;
+    }
+
+    .use-card {
+        margin-bottom: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+} 
